@@ -14,9 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;  /* content width */
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
   
   /* Logo */
@@ -24,6 +23,7 @@
     width: 120px;
     height: auto;
     object-fit: contain;
+    cursor: pointer;
   }
   
   /* Navigation menu */
@@ -80,4 +80,44 @@
       align-items: center;
     }
   }
+
+.unit-code-card {
+  background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 9px;
+    position: absolute;
+    top: 53px;
+    right: 230px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* display: none; */
+}
+
+.unit-code-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.unit-code-card li {
+  margin: 10px 0;
+}
+
+.header-right1 {
+  cursor: pointer; 
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  left: 300px;
+}
+
+.header-right1:hover {
+ 
+}
+
+.unit-code-card ul li:hover {
+  width: 100%;
+  background: #007bff;
+   cursor:pointer;
+}
+
   

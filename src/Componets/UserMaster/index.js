@@ -2,20 +2,37 @@ import React from "react";
 import Header from "../../layouts/header";
 import Sidebar from "../../layouts/sidebar";
 import "../../style/globle.css";
-
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { validateForm } from "../utils/validation";
 function Index() {
+    const navigate = useNavigate();
+    const [tabledata ,settabledata] = useState([]);
+     const [errors, setErrors] = useState({});
     const columns = [
         { title: "Name", field: "name" },
         { title: "Email", field: "email" },
         { title: "Phone", field: "phone" },
+      
       ];
     
       // Table data
       const tableData = [
-        { name: "Satendra", email: "satendra@example.com", phone: "9876543210" },
-        { name: "Rahul", email: "rahul@example.com", phone: "9123456789" },
-        { name: "Amit", email: "amit@example.com", phone: "9988776655" },
+        { name: "Satendra", email: "satendra@example.com", phone: "9876543210", id:'1'},
+        { name: "Rahul", email: "rahul@example.com", phone: "9123456789" ,id:'2'},
+        { name: "Amit", email: "amit@example.com", phone: "9988776655",id:'3' },
       ];
+    
+        function Addbutton (){
+            navigate('/user-master/create')
+        }
+
+        function reset(){
+
+        }
+        function SearchButton(){
+
+        }
 
     return (
         <div className="app-layout">
@@ -48,9 +65,9 @@ function Index() {
                             <div className="form-row">
                                 <div className="form-group">
                                     <label className="cinput_lable">Name</label>
-                                    <input className="cinput_field" type="text" />
+                                    <input className="cinput_field" name="name" type="text" />
                                 </div>
-
+                                {errors.name && <p className="error-text">{errors.name}</p>}
                                 <div className="form-group">
                                     <label className="cinput_lable">Email</label>
                                     <input className="cinput_field" type="email" />
@@ -79,10 +96,10 @@ function Index() {
                                 </div>
                             </div>
                             <div className="form-row form-actions">
-                                <button className="search_btn btn" type="submit">
+                                <button className="search_btn btn" onClick={SearchButton} type="submit">
                                     Search
                                 </button>
-                                <button className="btn-danger" type="reset">
+                                <button className="btn-danger" onClick={reset} type="reset">
                                     Reset
                                 </button>
                             </div>
@@ -90,10 +107,13 @@ function Index() {
                     </div>
                     <div className="card">
                         <div className="card-body">
-                            <a href="/user-master/create">
+                            <div className="addbutton">
+                            <button class="btn add-btn" onClick={Addbutton} type="button">Add</button>
+                            </div>
+                            {/* <a href="/user-master/create"> */}
                                 {/* <button type="button">Add</button> */}
-                                <button class="btn add-btn" type="button">Add</button>
-                            </a>
+                               
+                            {/* </a> */}
                             <table className="globle-table">
                                 <thead>
                                     <tr>

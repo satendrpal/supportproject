@@ -4,13 +4,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UserMasterIndex from './Componets/UserMaster/index';
 import UserMasterCreate from './Componets/UserMaster/create'
 import Index from './Componets/index'
+import Dashboard from './Componets/Dashboard';
+import Login from './login';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Index />} />
+      <Route path="/" element={<Login />} />
+        <Route path="/index" element={<Index />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user-master" element={<UserMasterIndex />} />
         <Route path="/user-master/create" element={<UserMasterCreate />} />
       </Routes>
