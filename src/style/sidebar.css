@@ -45,6 +45,7 @@
     border-radius: 5px;
   }
   
+<<<<<<< HEAD
 
   
 /* Navigation list */
@@ -125,4 +126,29 @@ ease;
 
 
 
+=======
+  .sidebar-nav ul li a:hover {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 8px 12px;
+    text-align: left;
+    width: 100%;
+  }
+  .nav-btn:hover {
+    background-color: #284a6e;
+  }
+  .submenu .nav-btn {
+    position: relative;
+    font-size: 13px;
+ 
+  }
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
   

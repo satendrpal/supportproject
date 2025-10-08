@@ -1,0 +1,112 @@
+body {
+    background-image: url('../../public/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 86vh;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+ 
+  .login_form input[type="text"], input[type="password"] {
+    width: 93%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+  }
+  .login_form select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    }
+
+  
+
+  .container-login100
+ {
+  display: flex;
+  justify-content: center;
+    width: 100%;
+    /* max-width: 950px; */
+    max-width: 890px;
+    height: 100%;
+    /* padding: 15px; */
+    z-index: 999;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin-top: 70px; */
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    align-items: center;
+    /* height: 60vh; */
+    border-radius: 5px;
+ }
+
+
+
+  
+
+  /* .container-login100 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    height: 80%;
+     background: rgba(255, 255, 255, 0.9);
+  } */
+  
+
+  .login_img {
+    width: 56%;
+    /* background-image: url('../../public/login_img_1.svg'); */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 18px 0px 0px 18px
+  }
+  
+  /* Right side section (login form) */
+  .login-section {
+    /* display: flex; */
+    width: 36%; /* Half the screen */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0px 18px 18px 0px;
+    text-align: center;
+    height: 100%;
+  }
+  
+  
+  .login_submit button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6797ed;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .login_submit button:hover {
+    background-color: #457de4;
+  }
+  .client-name{
+    position: relative;
+    top: -186px;
+    color: #676adf;
+    font-size: 29px;
+  }
