@@ -179,15 +179,15 @@ body{
 
   .globle-table th,
 .globle-table td {
-  padding: 10px 12px;
+  padding: 4px 0px;
   border: 1px solid #ddd;
   text-align: left;
   white-space: nowrap;
 }
 
 .globle-table th {
-  background-color: #f4f4f4;
-  font-weight: 600;
+  background-color: #0056b3;
+  /* font-weight: 600; */
   color: #333;
 }
 
@@ -201,3 +201,37 @@ body{
   transition: 0.2s;
 }
   
+
+
+.pagination-controls {
+  /* margin-top: 20px;
+  display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-controls select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.pagination-controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-controls img {
+  width: 50px;
+  height: 40px;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pagination-controls button{
+  position: relative;
+  top: 15px;
+}
