@@ -18,7 +18,7 @@ function Index() {
   const [errors, setErrors] = useState({});
 
   function btncancel() {
-    navigate("/user-master");
+    navigate("/product-master");
   }
 
   function handleChange(e) {
@@ -47,12 +47,12 @@ function Index() {
           <div className="page-header">
             <ul className="breadcrumbs">
               <li className="nav-item">
-                <a href="">Home </a>
+                <a href="">Home</a>
               </li>
               <li className="separator">
                 <i className="icon-arrow-right"></i>
               </li>
-              <li className="nav-item">Part Master</li>
+              <li className="nav-item">Create</li>
             </ul>
             <li className="btn-save">
               <button

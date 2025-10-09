@@ -6,6 +6,8 @@ import UserMasterCreate from './Componets/UserMaster/create'
 import Index from './Componets/index'
 import Dashboard from './Componets/Dashboard';
 import Login from './login';
+import PartMasterIndex from './Componets/PartMaster/index';
+import PartMasterCreate from './Componets/PartMaster/create'
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user-master" element={<UserMasterIndex />} />
         <Route path="/user-master/create" element={<UserMasterCreate />} />
+        <Route path="/product-master" element={<PartMasterIndex />} />
+        <Route path="/product-master/create" element={<PartMasterCreate />} />
       </Routes>
     </Router>
   );

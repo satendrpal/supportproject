@@ -9,7 +9,7 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    padding: 58px 0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   }
   
@@ -68,5 +68,27 @@
     position: relative;
     font-size: 13px;
  
+  }
+
+
+  
+  
+  
+
+  
+  .nav-btn.active-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* .nav-btn.active-parent {
+    font-weight: bold;
+    background-color: #e0e0e0;
+  } */
+  
+  .submenu {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
   }
   

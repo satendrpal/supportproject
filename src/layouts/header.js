@@ -1,27 +1,47 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../style/header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
   const [isUnitCodeVisible, setUnitCodeVisible] = useState(false);
-  const unitCodeRef = useRef(null); // To reference the unit code card
-  const headerRef = useRef(null); // To reference the header and prevent clicking on it from closing the popup
+  const [isProfileOpenVisible, setProfileOpenVisible] = useState(false);
+  const unitCodeRef = useRef(null); 
+  const headerRef = useRef(null); 
+  const [unicode ,setUnitcode] = useState(10001);
   
-  // Toggle visibility of Unit Code card
+
   const toggleUnitCode = () => {
     setUnitCodeVisible(!isUnitCodeVisible);
   };
 
-  // Close popup when clicking outside
+  function profiletoggle(){
+    setProfileOpenVisible(!isProfileOpenVisible)
+  }
+
   const handleClickOutside = (event) => {
+  
     if (unitCodeRef.current && !unitCodeRef.current.contains(event.target) && !headerRef.current.contains(event.target)) {
-      setUnitCodeVisible(false);  // Close the popup
+      setUnitCodeVisible(false); 
+      setProfileOpenVisible(false)
     }
   };
 
-  // Set up event listener on mount and clean up on unmount
+  function handleclick(event){
+    if (event.target.tagName === 'LI') {
+      console.log(event.target.textContent);
+      setUnitcode(event.target.textContent)
+      setUnitCodeVisible(false); 
+      navigate('/dashboard')
+    }
+     
+  }
+
+
   useEffect(() => {
+   
     document.body.addEventListener('click', handleClickOutside);
     return () => {
       document.body.removeEventListener('click', handleClickOutside);
@@ -31,39 +51,57 @@ function Header() {
   function logiClick() {
     navigate('/dashboard');
   }
+function signout(){
+  navigate('/');
+}
 
   return (
     <header className="header" ref={headerRef}>
       <div className="header-container">
-        {/* Left Section: Logo */}
         <div className="header-left">
           <div className="logo" onClick={logiClick}>
             <img src="/goerp.png" alt="Logo" className="logo-img" />
           </div>
         </div>
 
-        {/* Middle Section: Unit Code Toggle */}
         <div className="header-right1" onClick={toggleUnitCode}>
-          Unit Code :10002
+          Unit Code :{unicode}
+          <FontAwesomeIcon 
+        icon={faSortDown} 
+        className="sort-down-icon" 
+        style={{ marginLeft: '5px', cursor: 'pointer' }} 
+      />
         </div>
-
-        {/* Toggleable Unit Code Card */}
         {isUnitCodeVisible && (
           <div className="unit-code-card" ref={unitCodeRef}>
-            {/* Your unit codes or any additional content goes here */}
-            <ul>
+            <ul onClick={handleclick}>
               <li>10001</li>
               <li>10002</li>
               <li>10003</li>
             </ul>
+      
           </div>
         )}
 
-        {/* Right Section: Profile */}
-        <div className="header-right">
-          <img src="/profile.jpg" alt="Profile" className="profile-img" />
-          <span className="username">Satendra</span>
-        </div>
+<div className="header-right" onClick={profiletoggle}>
+      <img src="/profile.jpg" alt="Profile" className="profile-img" />
+      <span className="username">Satendra</span>
+      <FontAwesomeIcon 
+        icon={faSortDown} 
+        className="sort-down-icon" 
+        style={{ marginLeft: '5px', cursor: 'pointer' }} 
+      />
+    </div>
+    {isProfileOpenVisible && (
+          <div className="userprofile">
+            <ul>
+              <li>Profile</li>
+              <hr></hr>
+              <li onClick={signout} style={{cursor:'pointer'}}><FontAwesomeIcon icon="fa-duotone fa-regular fa-right-from-bracket" /> SignOut</li>
+            </ul>
+      
+          </div>
+        )}
       </div>
     </header>
   );
