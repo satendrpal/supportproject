@@ -60,6 +60,7 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #ddd;
+    cursor: pointer;
   }
   
   .username {
@@ -93,7 +94,7 @@
   /* display: none; */
 }
 
-.unit-code-card ul {
+ ul {
   list-style: none;
   padding: 0;
 }
@@ -120,4 +121,29 @@
    cursor:pointer;
 }
 
+.sort-down-icon {
+  font-size: 12px; /* Adjust size */
+  color: #555; /* Icon color */
+}
+
+.header-right:hover .sort-down-icon {
+  color: #007bff; /* Hover color */
+}
+
+
+.userprofile {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 9px;
+  position: absolute;
+  top: 53px;
+  right: 13px;
+  /* left: 0px; */
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* display: none; */
+  font-size: 14px;
+  float: right;
+  line-height: 10px;
+}
   
