@@ -1,0 +1,79 @@
+.modal-overlay-gettable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-gettable {
+  position: relative;
+  background: white;
+  padding: 10px 8px;
+  border-radius: 4px;
+  max-height: 80vh;
+  /* overflow-y: auto; */
+  /* width: 22%; */
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-table-gettable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.modal-table-gettable th,
+.modal-table-gettable td {
+  border: 1px solid #ddd;
+  padding: 0px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.modal-table-gettable tr:hover {
+  background: #6b7aea;
+
+}
+
+.modal-table-gettable th {
+  background-color: #f4f4f4;
+}
+
+.close-btn {
+  /* padding: 8px 15px; */
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  float: right;
+}
+
+.close-btn {
+  position: relative;
+  top: -8px;
+}
+
+.pegin-gettable img {
+  width: 40px;
+  height: 32px;
+}
+
+.pegin-gettable button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pegin-gettable button{
+  position: relative;
+  top: -6px;
+}

@@ -184,7 +184,11 @@ body{
 
   .globle-table th,
 .globle-table td {
+<<<<<<< HEAD
+  padding: 4px 0px;
+=======
   padding: 3px 12px;
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
   border: 1px solid #ddd;
   text-align: left;
   white-space: nowrap;
@@ -192,8 +196,13 @@ body{
 }
 
 .globle-table th {
+<<<<<<< HEAD
+  background-color: #0056b3;
+  /* font-weight: 600; */
+=======
   background-color: #3a9ba8;
   font-weight: 600;
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
   color: #333;
 }
 
@@ -206,6 +215,43 @@ body{
   background-color: #f1f1f1;
   transition: 0.2s;
 }
+<<<<<<< HEAD
+  
+
+
+.pagination-controls {
+  /* margin-top: 20px;
+  display: flex; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination-controls select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.pagination-controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-controls img {
+  width: 50px;
+  height: 40px;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pagination-controls button{
+  position: relative;
+  top: 15px;
+}
+=======
 
 .addbutton button {
   cursor: pointer;
@@ -256,3 +302,4 @@ body{
 .my-confirm { background-color: #007bff !important; }
 .my-cancel { background-color: #6c757d !important; }
 
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907

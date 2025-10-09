@@ -5,18 +5,29 @@ import UserMasterIndex from './Componets/UserMaster/index';
 import UserMasterCreate from './Componets/UserMaster/create'
 import Index from './Componets/index'
 import Dashboard from './Componets/Dashboard';
+<<<<<<< HEAD
+=======
 import Login from './login';
+<<<<<<< HEAD
 import PartMasterIndex from './Componets/PartMaster/index';
 import PartMasterCreate from './Componets/PartMaster/create'
+=======
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
+>>>>>>> 743098f2217d47913b52e2ef05a55a1484398b2a
 
 
 function App() {
   return (
     <Router>
       <Routes>
+<<<<<<< HEAD
+        <Route path="/" element={<Index />} />
+        <Route path='/dashboard' element={<Dashboard/>}/>
+=======
       <Route path="/" element={<Login />} />
         <Route path="/index" element={<Index />} />
         <Route path="/dashboard" element={<Dashboard />} />
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
         <Route path="/user-master" element={<UserMasterIndex />} />
         <Route path="/user-master/create" element={<UserMasterCreate />} />
         <Route path="/product-master" element={<PartMasterIndex />} />

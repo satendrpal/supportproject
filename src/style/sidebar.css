@@ -40,12 +40,93 @@
     color: #ddd;
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 20px;
     display: block;
     transition: background 0.3s, color 0.3s;
     border-radius: 5px;
   }
   
+<<<<<<< HEAD
+
+  
+/* Navigation list */
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu item links */
+.sidebar-nav a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+
+
+/* Parent item with submenu */
+.parent a {
+  cursor: pointer;
+}
+
+/* Submenu */
+.submenu {
+
+  background-color: #444;
+  border-left: 2px solid #555;
+  display: block;
+}
+
+/* Active submenu item */
+.submenu li a {
+  /* background-color: #007bff; */
+  position: relative;
+  left: 35px;
+}
+
+/* Icon size and styling */
+.icon {
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Add transform effect when expanding/collapsing */
+.parent a:hover .icon {
+  transform: scale(1.2);
+}
+
+.icon {
+    display: inline-block;
+    font-family: "FontAwesome";
+    text-rendering: auto;
+    line-height: 40px;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 18px;
+    /* top: 11px; */
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transition: all 0.2s 
+ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s 
+ease;
+    position: absolute;
+    right: 15px;
+
+}
+
+
+
+
+=======
   .sidebar-nav ul li a:hover {
     background: #007bff;
     color: #fff;
@@ -69,6 +150,7 @@
     font-size: 13px;
  
   }
+<<<<<<< HEAD
 
 
   
@@ -91,4 +173,7 @@
     padding-left: 20px;
     margin: 0;
   }
+=======
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
+>>>>>>> 743098f2217d47913b52e2ef05a55a1484398b2a
   

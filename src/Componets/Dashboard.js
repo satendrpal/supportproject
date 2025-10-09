@@ -1,6 +1,20 @@
 import React from "react";
 import Header from "../layouts/header";
 import Sidebar from "../layouts/sidebar";
+<<<<<<< HEAD
+
+function Dashboard(){
+return(
+    <div className="app-layout">
+            <Header />
+              <div className="app-body">
+                <Sidebar />
+                <div className="main-panel"></div>
+               <h1>Dashboard</h1>
+</div>
+</div>
+);
+=======
 import "../style/globle.css";
 
 function Dashboard() {
@@ -28,5 +42,6 @@ function Dashboard() {
             </div>
         </div>
     );
+>>>>>>> f50791c480f05bead5a99f78e913b9282be82907
 }
 export default Dashboard
